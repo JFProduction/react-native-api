@@ -13,7 +13,7 @@ router.get('/users', (req, resp, next) => {
 
 router.put('/addUser', (req, resp, next) => {
     if (!req.body) return resp.sendStatus(400)
-    console.log(req.body)
+    
     new user(req.body).save((err, doc) => {
         if (err) {
             resp.json({
