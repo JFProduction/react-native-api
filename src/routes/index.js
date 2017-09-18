@@ -11,7 +11,7 @@ router.get('/users', (req, resp, next) => {
     })
 })
 
-router.put('/addUser', (req, resp, next) => {
+router.post('/addUser', (req, resp, next) => {
     if (!req.body) return resp.sendStatus(400)
     
     new user(req.body).save((err, doc) => {
